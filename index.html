@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixed Messages</title>
+</head>
+<body>
+    <h1 id="headingOne"></h1>
+    <br>
+    <p id="program">program will go here</p>
+    <script>
+        var now = new Date();
+        var date = now.toLocaleDateString("en-NZ");
+        document.getElementById("headingOne").innerHTML = "Swim Program for " + date;
+    </script>    
+</body>
+</html>
