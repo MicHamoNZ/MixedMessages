@@ -18,10 +18,10 @@ for(let prop in swimSets) {
     // Use the swimSets properties to customise the sets being added to the swimProgram
     switch(prop) {
         case 'warmUp':
-            swimProgram.push(`Warmup:<br>${warmUps[option][index]}`);
+            swimProgram.push(`Warmup:<br>t${swimSets[prop][index]}`);
             break;
         case 'mainSet':
-            swimProgram.push(`<br>Main:<br>${swimSets[prop][index]}`);
+            swimProgram.push(`<br>Main:<br>>${swimSets[prop][index]}`);
             break;
         case 'coolDown':
             swimProgram.push(`<br>Cooldown:<br>${swimSets[prop][index]}`);
