@@ -3,9 +3,9 @@ function generateRandomNumber(num) {
 };
 
 const swimSets = {
-    warmUps:  ['300m Freestyle easy pace<br>1min rest<br>200m Freestyle moderate pace','250m Freestyle easy pace<br>30sec rest<br>150m Freestyle moderate pace','500m Freestyle build-up (start easy and gradually increase speed)'], 
-    mainSet: {},
-    coolDown: {}
+    warmUp:  ['300m Freestyle easy pace<br>1min rest<br>200m Freestyle moderate pace','250m Freestyle easy pace<br>30sec rest<br>150m Freestyle moderate pace','500m Freestyle build-up (start easy and gradually increase speed)'], 
+    mainSet: [],
+    coolDown: []
 };
 
 let swimProgram = [];
@@ -13,15 +13,15 @@ let swimProgram = [];
 // Iterate over swimSets
 for(let prop in swimSets) {
     let index = generateRandomNumber(swimSets[prop].length);
-    console.log(prop, index);
+    console.log(swimSets[prop].length);
 
     // Use the swimSets properties to customise the sets being added to the swimProgram
     switch(prop) {
         case 'warmUp':
-            swimProgram.push(`Warmup:<br>t${swimSets[prop][index]}`);
+            swimProgram.push(`Warmup:<br>${swimSets[prop][index]}`);
             break;
         case 'mainSet':
-            swimProgram.push(`<br>Main:<br>>${swimSets[prop][index]}`);
+            swimProgram.push(`<br>Main:<br>${swimSets[prop][index]}`);
             break;
         case 'coolDown':
             swimProgram.push(`<br>Cooldown:<br>${swimSets[prop][index]}`);
