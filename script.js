@@ -3,7 +3,7 @@ function generateRandomNumber(num) {
 };
 
 const swimSets = {
-    // warmUp: ['300m Freestyle easy pace<br>>1min rest<br>200m Freestyle moderate pace','250m Freestyle easy pace<br>30sec rest<br>150m Freestyle moderate pace','500m Freestyle build-up (start easy and gradually increase speed)'],
+    warmUp: ['300m Freestyle easy pace<br>1min rest<br>200m Freestyle moderate pace','250m Freestyle easy pace<br>30sec rest<br>150m Freestyle moderate pace','500m Freestyle build-up (start easy and gradually increase speed)'],
     mainSet: [],
     coolDown: []
 };
