@@ -3,7 +3,7 @@ function generateRandomNumber(num) {
 };
 
 const swimSets = {
-    warmUp: ['300m Freestyle easy pace\n\t1min rest\n\t200m Freestyle moderate pace','250m Freestyle easy pace\n30sec rest\n150m Freestyle moderate pace','500m Freestyle build-up (start easy and gradually increase speed)'],
+    // warmUp: ['300m Freestyle easy pace<br>>1min rest<br>200m Freestyle moderate pace','250m Freestyle easy pace<br>30sec rest<br>150m Freestyle moderate pace','500m Freestyle build-up (start easy and gradually increase speed)'],
     mainSet: [],
     coolDown: []
 };
@@ -18,13 +18,13 @@ for(let prop in swimSets) {
     // Use the swimSets properties to customise the sets being added to the swimProgram
     switch(prop) {
         case 'warmUp':
-            swimProgram.push(`Warmup:\n\t${swimSets[prop][index]}`);
+            swimProgram.push(`Warmup:<br>t${swimSets[prop][index]}`);
             break;
         case 'mainSet':
-            swimProgram.push(`\nMain:\n\t${swimSets[prop][index]}`);
+            swimProgram.push(`<br>Main:<br>>${swimSets[prop][index]}`);
             break;
         case 'coolDown':
-            swimProgram.push(`\nCooldown:\n\t${swimSets[prop][index]}`);
+            swimProgram.push(`<br>Cooldown:<br>${swimSets[prop][index]}`);
             break;
         default:
             swimProgram.push('This is your lucky day');
@@ -32,7 +32,7 @@ for(let prop in swimSets) {
 }
 
 function formatSwimProgram(program) {
-    const formatted = swimProgram.join('\n');
+    const formatted = swimProgram.join('<br>');
     return formatted;
 }
 
