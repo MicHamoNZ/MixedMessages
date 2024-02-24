@@ -21,15 +21,20 @@ for(let prop in swimSets) {
             swimProgram.push(`Warmup:\n\t${swimSets[prop][index]}`);
             break;
         case 'mainSet':
-            swimProgram.push(`Warmup:\n\t${swimSets[prop][index]}`);
+            swimProgram.push(`\nMain:\n\t${swimSets[prop][index]}`);
             break;
-        case 'cooDown':
-            swimProgram.push(`Warmup:\n\t${swimSets[prop][index]}`);
+        case 'coolDown':
+            swimProgram.push(`\nCooldown:\n\t${swimSets[prop][index]}`);
             break;
         default:
             swimProgram.push('This is your lucky day');
-            break;
     };
 }
 
-console.log(swimProgram);
+function formatSwimProgram(program) {
+    const formatted = swimProgram.join('\n');
+    return formatted;
+}
+
+document.getElementById("program").innerHTML = 
+formatSwimProgram(swimProgram);
